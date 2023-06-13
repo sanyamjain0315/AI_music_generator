@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Audiophiles</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Audiophiles</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </nav>
+
+  <div class="form-group transparent-input">
+    <h1 class="fw-light text-white m-0">Text-to-Song</h1>
+  <form action="{{ url_for('process_form') }}" method="POST">
+    <div>
+      <label for="user_input">Enter Text:</label>
+      <textarea class="form-control transparent-textarea" rows="5" id="user_input" name="user_input" placeholder="Enter text"></textarea>
+    </div>
+    <br><br>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+        <label for="dropdown_menu">Artist:</label>
+          <select class="form-control transparent-dropdown" id="dropdown_menu" name="dropdown_menu">
+            <option value="2c0c275e-f1ed-44a6-9797-bf67587365fa">J COLE</option>
+            <option value="d2720e18-2015-4e2f-a3ef-9ec807ba3f48">Drake</option>
+            <option value="d8b38103-4ed9-4639-9326-8c8e180970c5">Eminem</option>
+            <option value="133d0825-2e5a-4bfc-b9b2-75e643e459a6">Jay-Z</option>
+
+          </select>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <br>
+        <button type="submit" class="btn btn-custom-color w-100">Submit</button>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

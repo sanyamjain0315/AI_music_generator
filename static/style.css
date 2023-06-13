@@ -1,0 +1,69 @@
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	height: 100vh;
+	color: white;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+.navbar {
+	padding-left: 5%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.nav-item {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.transparent-input {
+	text-align: center;
+
+	padding-top: 5%;
+	padding-left: 25%;
+	padding-right: 25%;
+}
+
+.transparent-textarea {
+	background-color: transparent;
+	border: none;
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	color: white;
+}
+
+.transparent-dropdown {
+	background-color: transparent;
+	border-color:  2px solid white;
+}
+
+.btn-custom-color {
+	background-color: white;
+	opacity: 0.5;
+	border-color:  2px solid white;
+
+}
+
+.btn-custom-color:hover {
+	background-color: black;
+	opacity: 1;
+	border-color:  2px solid white;
+	color: white;
+
+  }
